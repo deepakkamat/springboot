@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bill</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>ABC Online Market</h3>
+	<table width="645" border="1" cellpadding ="10" celspacing="10">
+		<tr>
+			<td>Order</td>
+			<td><b th:text="${order.orderNo}"></b></td>
+			<td>Order Date</td>
+			<td><b th:text="${order.orderDate}"></b></td>
+
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td colspan="3"><b th:text="${order.customerName}"></b></td>
+
+		</tr>
+	</table>
+	<h2>List Of Products</h2>
+	<table border="1" cellpadding ="10" celspacing="10">
+
+		<tr>
+			<th width="400" align ="left">Product Name</th>
+			<th width="15">Qty</th>
+			<th width="50">Amount</th>
+			<th width="50">Tax</th>
+		</tr>
+		<div th:each="r:${bill}">
+		<tr>
+			<td width="400" th:text="${r.product.productName}"></td>
+			<td width="15" align ="right" th:text="${r.quantity}"></td>
+			<td width="50" align ="right" th:text="${r.itemAmount}"></td>
+			<td width="50" align ="right" th:text="${r.itemTax}"></td>
+		</tr>
+			
+		</div>
+		<tr>
+			<td width="400">&nbsp;</td>
+			<td width="15" align ="right"><b>Total</b></td>
+			<td width="50" align ="right"><b th:text="${order.totalAmount}"></b></td>
+			<td width="50" align ="right"><b th:text="${order.totalTax}"></b></td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>

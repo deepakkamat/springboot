@@ -1,0 +1,95 @@
+•	Development  Notes
+o	Development framework 
+	Spring boot 
+	1.4.1.RELEASE
+	Spring Data
+	Hibernate 4.1.9.Final
+	Thymeleaf
+	Spring MVC
+	Spring rest Service
+	HSQL DB
+o	Unit Test Framework
+	Junit
+	Mockito
+	spring-restdocs-mockmvc
+
+•	Deployment Steps
+o	System Requirement
+	JDK 1.7 and above 
+	Maven  3.3.9
+o	Compiling source including test 
+	mvn clean install
+o	Compiling source excluding test 
+	mvn clean install -Dmaven.test.skip=true
+o	Run using maven
+	mvn spring-boot:run	
+
+•	Running without maven [outside development environment]
+o	Check  assignment-0.0.1-SNAPSHOT.jar file in /assignment/target folder
+o	Run as  ‘java -jar assignment-0.0.1-SNAPSHOT.jar’
+•	Sample Rest services
+
+o	List all available Products
+	 http://localhost:8080/oms/listProducts
+	Header required 
+•	Accept-Language  : en_US
+	Authorization required 
+•	Type : Basic Auth
+•	User name :  user
+•	Password  : password
+	Sample Request
+GET /oms/listProducts HTTP/1.1
+Host: localhost:8080
+Authorization: Basic dXNlcjpwYXNzd29yZA==
+Accept-Language: en_US
+Cache-Control: no-cache
+Postman-Token: a8e28288-6485-7c16-b632-193d5c85c196
+
+o	Add item to cart
+	http://localhost:8080/oms/addToCart
+	Header required 
+•	Accept-Language  : en_US
+	Authorization required 
+•	Type : Basic Auth
+•	User name :  user
+•	Password  : password
+	Sample Request
+POST /oms/addToCart HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Authorization: Basic dXNlcjpwYXNzd29yZA==
+Accept-Language: es
+Cache-Control: no-cache
+Postman-Token: 2ea3edf1-f1e8-ba87-e6ed-2b7add78e558
+{
+"productId":"1001",
+"quantity":"3",
+"cartId": "1001"
+}
+
+o	Checkout
+	http://localhost:8080/oms/checkout/{orderNo}
+	http://localhost:8080/oms/checkout/1001
+	Header required 
+•	Accept-Language  : en_US
+	Authorization required 
+•	Type : Basic Auth
+•	User name :  user
+•	Password  : password
+
+	Sample Request
+GET /oms/checkout/1001 HTTP/1.1
+Host: localhost:8080
+Accept-Language: es
+Authorization: Basic dXNlcjpwYXNzd29yZA==
+Cache-Control: no-cache
+Postman-Token: 912d983d-c379-001d-42a5-9968c4b89fcc
+
+o	Print bill [To be executed on Browser]
+	http://localhost:8080/oms/bill.xhtml?orderNo=
+	http://localhost:8080/oms/bill.xhtml?orderNo=402894a557cc46e30157cc5092570000
+	Authorization required 
+•	Type : Basic Auth
+•	User name :  user
+•	Password  : password
+ 

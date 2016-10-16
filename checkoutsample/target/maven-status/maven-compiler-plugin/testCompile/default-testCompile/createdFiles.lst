@@ -1,0 +1,9 @@
+com\abc\oms\dao\OrderItemDaoTest.class
+com\abc\oms\service\OrderServiceImplTest.class
+com\abc\oms\service\ProductServiceImplTest.class
+com\abc\oms\dao\CartItemDaoTest.class
+com\abc\oms\service\CartServiceImplTest.class
+com\abc\oms\api\PrintControllerTest.class
+com\abc\oms\IntegrationTest$ContextConfiguration.class
+com\abc\oms\IntegrationTest.class
+com\abc\oms\api\OrderControllerTest.class
