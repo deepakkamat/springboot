@@ -25,8 +25,8 @@ o	Run using maven
 	mvn spring-boot:run	
 
 •	Running without maven [outside development environment]
-o	Check  assignment-0.0.1-SNAPSHOT.jar file in /assignment/target folder
-o	Run as  ‘java -jar assignment-0.0.1-SNAPSHOT.jar’
+o	Check  checkoutSample-0.0.1-SNAPSHOT.jar file in /checkoutSample/target folder
+o	Run as  ‘java -jar checkoutSample-0.0.1-SNAPSHOT.jar’
 •	Sample Rest services
 
 o	List all available Products
